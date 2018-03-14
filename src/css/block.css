@@ -1,0 +1,16 @@
+.block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: flex-start;
+}
+
+.block__item {
+    flex: 0 auto;
+}
+
+.block__item + .block__item {
+    margin-left: 1rem;
+}

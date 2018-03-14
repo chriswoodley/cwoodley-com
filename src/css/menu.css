@@ -1,0 +1,445 @@
+/*==========================================
+=            Menu Module Styles            =
+==========================================*/
+
+.menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: column;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+}
+
+.menu--border .menu__item + .menu__item {
+    border-top: 1px solid #ccc;
+}
+
+.menu__item > a,
+.menu__item--parent > span {
+    display: block;
+
+    padding: .75rem 1.5rem;
+
+    white-space: nowrap;
+}
+
+.menu__item > a:link,
+.menu__item > a:visited {
+    text-decoration: none;
+}
+
+.menu__item > a:hover,
+.menu__item > a:focus,
+.menu__item > a:active,
+.menu__item--active > a:link,
+.menu__item--active > a:visited,
+.menu__item--parent > span:hover,
+.menu__item--parent.menu__item--active > span {
+    color: #fff;
+}
+
+.menu__item > a:hover,
+.menu__item > a:focus,
+.menu__item > span:hover {
+    background-color: #2795ff;
+}
+
+.menu__item > a:focus,
+.menu__item > a:hover {
+    outline: none;
+}
+
+.menu__item > a:active,
+.menu__item--active > a,
+.menu__item--active > span {
+    background: #207cd4;
+}
+
+
+/*----------  Sub Menu Styles  ----------*/
+
+.menu__item--parent,
+.menu__sub-item--parent {
+    position: relative;
+}
+
+.menu__sub {
+    overflow: hidden;
+
+    width: inherit;
+    max-height: 0;
+    margin: 0;
+    /*padding: 0 0 0 1.5rem;*/
+    padding: 0;
+
+    list-style: none;
+
+    -webkit-transition: max-height 1s;
+            transition: max-height 1s;
+
+    background-color: #efefef;
+}
+
+.menu__sub--border > .menu__sub-item + .menu__sub-item {
+    border-top: 1px solid #ccc;
+}
+
+.menu__item--parent:hover > span {
+    color: #fff;
+    background-color: #2795ff;
+}
+
+.menu__item--parent-is-active > .menu__sub,
+.menu__sub-item--parent-is-active > .menu__sub {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: column;
+
+    max-height: 999px;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+}
+
+.menu__sub-item > a,
+.menu__sub-item--parent > span {
+    display: block;
+
+    padding: .75rem 1.5rem;
+}
+
+.menu__sub-item > a:link,
+.menu__sub-item > a:visited {
+    text-decoration: none;
+}
+
+.menu__sub-item > a:hover,
+.menu__sub-item > a:focus,
+.menu__sub-item > a:active,
+.menu__sub-item--active > a:link,
+.menu__sub-item--active > a:visited,
+.menu__sub-item--parent > span:hover,
+.menu__sub-item--parent:hover > span,
+.menu__sub-item--parent.menu__sub-item--active > span {
+    color: #fff;
+}
+
+.menu__sub-item > a:hover,
+.menu__sub-item > a:focus,
+.menu__sub-item > span:hover,
+.menu__sub-item--parent:hover > span {
+    background-color: #999;
+}
+
+.menu__sub-item > a:focus,
+.menu__sub-item > a:hover {
+    outline: none;
+}
+
+.menu__sub-item > a:active,
+.menu__sub-item--active > a,
+.menu__sub-item--active > span {
+    background: #666;
+}
+
+
+/*----------  Sub Menu Indicator Styles  ----------*/
+
+.menu__item--parent > span,
+.menu__sub-item--parent > span {
+    position: relative;
+}
+
+.menu__item--parent > span:before,
+.menu__sub-item--parent > span:before {
+    position: absolute;
+    top: 17px;
+    right: .75rem;
+
+    display: block;
+
+    width: 0;
+    height: 0;
+
+    content: '';
+
+    border: 5px solid transparent;
+}
+
+.menu__item--parent > span:before,
+.menu__sub-item--parent > span:before {
+    border-right-color: #aaa;
+}
+
+.menu__item--parent:hover > span:before,
+.menu__sub-item--parent:hover > span:before {
+    top: 20px;
+
+    border-top-color: #fff;
+    border-right-color: transparent;
+}
+
+
+/*=====================================================================
+=            Menu Styles for Medium Screens - 768px and up            =
+=====================================================================*/
+
+@media screen and (min-width:64em) {
+    /*----------  Menu Styles  ----------*/
+
+    .menu {
+            flex-direction: row;
+
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+    }
+
+    .menu__item {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .menu__item > a {
+        -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+    }
+
+    .menu--border .menu__item + .menu__item {
+        border-top: 0;
+        border-left: 1px solid #ccc;
+    }
+
+
+    /*----------  Menu Alignment Styles  ----------*/
+
+    .menu--center {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .menu--right {
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+    }
+
+    .menu--justify-equal .menu__item,
+    .menu--justify-content .menu__item {
+        text-align: center;
+    }
+
+    .menu--justify-equal .menu__item {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    }
+
+    .menu--justify-content .menu__item {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    }
+
+
+    /*----------  Sub Menu Indicator Styles  ----------*/
+
+    .menu__item--parent > a,
+    .menu__sub-item--parent > a {
+        position: relative;
+
+        padding-right: 3rem;
+    }
+
+    .menu__item--parent > a:before,
+    .menu__sub-item--parent > a:before {
+        position: absolute;
+        right: 1.5rem;
+
+        display: block;
+
+        width: 0;
+        height: 0;
+
+        content: '';
+
+        border: 5px solid transparent;
+    }
+
+    .menu__item--parent > a:before {
+        top: 58%;
+
+        -webkit-transform: translateY(-58%);
+                transform: translateY(-58%);
+    }
+
+    .menu__sub-item--parent > a:before,
+    .menu--vertical .menu__item--parent:hover > a:before {
+        top: 50%;
+
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+    }
+
+    .menu__item--parent > a:before {
+        border-top-color: #aaa;
+    }
+
+    .menu--vertical .menu__item--parent > a:before,
+    .menu__sub-item--parent > a:before {
+        border-left-color: #aaa;
+    }
+
+    .menu--vertical .menu__item--parent > a:before,
+    .menu__item--parent:hover > a:before {
+        border-top-color: transparent;
+    }
+
+    .menu__item--parent:hover > a:before {
+        -webkit-transform: translateY(-118%);
+                transform: translateY(-118%);
+
+        border-bottom-color: #fff;
+    }
+
+    .menu--vertical .menu__item--parent:hover > a:before,
+    .menu__sub-item--parent:hover > a:before {
+        border-left-color: #fff;
+    }
+
+    .menu--vertical .menu__item--parent:hover > a:before {
+        border-bottom-color: transparent;
+    }
+
+    /**
+     * last item… move indicator to the left side instead of the right side
+     */
+    .menu__item--parent-last .menu__sub-item--parent > a:before {
+        right: auto;
+        left: 1.5rem;
+    }
+
+    .menu__item--parent-last .menu__sub-item--parent > a {
+        padding-right: 1.5rem;
+        padding-left: 3rem;
+    }
+
+    .menu__item--parent-last .menu__sub-item--parent > a:before {
+        border-right-color: #aaa;
+        border-left-color: transparent;
+    }
+
+    .menu__item--parent-last .menu__sub-item--parent:hover > a:before {
+        border-right-color: #fff;
+    }
+
+
+    /*----------  Sub Menu Styles  ----------*/
+
+    .menu__item--parent:hover {
+        background: #2795ff;
+    }
+
+    .menu__item--parent:hover > a {
+        color: #fff;
+    }
+
+    .menu__sub {
+        position: absolute;
+        z-index: 999;
+        top: 100%;
+        left: 0;
+
+        overflow: hidden;
+
+        height: 0;
+        max-height: none;
+        padding: 0;
+
+        -webkit-transition: unset;
+                transition: unset;
+        white-space: nowrap;
+    }
+
+    .menu__item--parent:hover > .menu__sub,
+    .menu__sub-item--parent:hover > .menu__sub {
+        overflow: visible;
+
+        height: auto;
+        max-height: none;
+    }
+
+    .menu__sub .menu__sub,
+    .menu--vertical .menu__sub {
+        top: 0;
+        left: 100%;
+    }
+
+    .menu__sub .menu__sub--border,
+    .menu--vertical .menu__sub--border {
+        top: -1px;
+    }
+
+    .menu__sub-item--parent:hover {
+        background: #999;
+    }
+
+    .menu__sub-item--parent:hover > a {
+        color: #fff;
+    }
+
+    /**
+      * Last menu item parent. sub menus cascade down to the left side instead
+      * of the right side
+      */
+    .menu__item--parent-last .menu__sub-item--parent > .menu__sub {
+        right: 100%;
+        left: auto;
+    }
+
+
+    /*----------  Align Sub Menus to Top Modifier  ----------*/
+
+    .menu--sub-menus-aligned-top {
+        position: relative;
+    }
+
+    .menu--sub-menus-aligned-top .menu__item--parent,
+    .menu--sub-menus-aligned-top .menu__sub-item--parent {
+        position: static;
+    }
+
+    .menu--sub-menus-aligned-top .menu__sub .menu__sub.menu__sub--border,
+    .menu--sub-menus-aligned-top .menu--vertical .menu__sub.menu__sub--border {
+        top: 0;
+    }
+
+
+    /*----------  Vertical Menu Styles  ----------*/
+
+    .menu--vertical {
+            flex-direction: column;
+
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+    }
+
+    .menu--vertical.menu--border .menu__item + .menu__item {
+        border-top: 1px solid #ccc;
+    }
+}

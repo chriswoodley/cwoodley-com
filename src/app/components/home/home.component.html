@@ -1,0 +1,53 @@
+<div class="intro light-gray-bg">
+  <div class="grid">
+    <div class="grid__row">
+      <section class="grid__col grid__col--md-12 hero">
+        <h1>I Love to Develop Websites</h1>
+        <p>That’s right! I'm technically proficient, easy to work with, and creative. The best part is that I'm available for
+          hire.</p>
+      </section>
+    </div>
+  </div>
+</div>
+
+<div class="portfolio light-gray-bg">
+  <div class="grid">
+    <div class="grid__row projects" [appChildHeight]="isExpanded">
+      <div class="grid__col grid__col--md-6 grid__col--lg-4" *ngFor="let project of projects$ | async as projects;">
+        <app-card [project]="project"></app-card>
+      </div>
+    </div>
+    <div class="grid__row">
+      <div class="grid__col grid__col--12 text-center">
+        <a class="btn btn--round btn--primary-o" role="button" (click)="toggleSeeMore($event)">{{ seeMoreBtnText }}</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="services blue-pattern white-text">
+  <div class="grid">
+    <div class="grid__row">
+      <section class="grid__col grid__col--md-6">
+        <h1>Services</h1>
+        <ul>
+          <li>Single Page Web Applications (Angular)</li>
+          <li>Responsive Mobile First Front-End Development</li>
+          <li>Wireframes / HTML Mockups</li>
+          <li>Dynamic Web Applications (PHP &amp; MySQL)</li>
+          <li>WordPress Theme Development</li>
+          <li>Information Architecture</li>
+          <li>User Interface Design</li>
+        </ul>
+      </section>
+
+      <section class="grid__col grid__col--md-4 grid__col--md-offset-2">
+        <h1 class="h3 white-text">Resumé</h1>
+        <p><a href="/assets/docs/cwoodley_resume.pdf" target="_blank" class="green-text"><i class="far fa-file-pdf fa-3x"></i></a>&nbsp;&nbsp;<a href="/assets/docs/cwoodley_resume.docx" class="green-text"><i class="far fa-file-word fa-3x"></i></a></p>
+
+        <h1 class="h3 white-text">Open Source</h1>
+        <p><a href="https://github.com/chriswoodley" target="_blank" class="green-text"><i class="fab fa-github fa-3x"></i></a></p>
+      </section>
+    </div>
+  </div>
+</div>

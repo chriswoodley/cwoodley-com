@@ -1,0 +1,37 @@
+figure
+{
+    margin: 0 0 1.5rem 0;
+    padding: 0;
+
+    border: 0;
+}
+
+figure a
+{
+    display: block;
+
+    padding: .5rem;
+
+    background: #475466;
+}
+
+figure a:hover,
+figure a:focus
+{
+    background: #2bd97f;
+}
+
+figure img
+{
+    display: block;
+}
+
+
+
+@media screen and (min-width: 64em)
+{
+    figure
+    {
+        margin: 0 0 3rem 0;
+    }
+}

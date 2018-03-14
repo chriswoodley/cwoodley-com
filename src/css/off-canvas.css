@@ -1,0 +1,70 @@
+.off-canvas {
+    overflow-x: hidden;
+}
+
+.off-canvas__menu,
+.off-canvas__content {
+    -webkit-transition-property: left, right;
+    -moz-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.25s;
+    -moz-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+}
+
+.off-canvas__menu {
+    position: fixed;
+    top:0;
+    z-index: 9999;
+    height: 100%;
+    width: 63%;
+    overflow-y: auto;
+}
+
+.off-canvas__content {
+    position: relative;
+}
+
+.off-canvas__content--fixed {
+    position: fixed;
+    width:100%;
+}
+
+/* Off Canvas Left */
+
+.off-canvas--left .off-canvas__menu {
+    left: -63%;
+}
+
+.off-canvas--left .off-canvas__content {
+    left: 0;
+}
+
+.off-canvas--left.is-active .off-canvas__menu {
+    left: 0;
+}
+
+.off-canvas--left.is-active .off-canvas__content {
+    left: 63%;
+}
+
+/* Off Canvas Right */
+
+.off-canvas--right .off-canvas__menu {
+    right: -63%;
+}
+
+.off-canvas--right .off-canvas__content {
+    right: 0;
+}
+
+.off-canvas--right.is-active .off-canvas__menu {
+    right: 0;
+}
+
+.off-canvas--right.is-active .off-canvas__content {
+    right: 67%;
+}

@@ -1,0 +1,63 @@
+.page {}
+
+.page__title
+{
+    padding: 1.5rem 0;
+
+    color: #949494;
+    background: #f1f1f1;
+}
+
+.page__title h1
+{
+    font-size: 1.5714285714285714rem;
+    line-height: 1.5;
+
+    margin-bottom: 0;
+
+    color: #475466;
+}
+
+.page__title p
+{
+    margin-bottom: 0;
+}
+
+.page__body
+{
+    padding: 1.5rem 0;
+
+    color: #fff;
+}
+
+.page__body > :last-child
+{
+    margin-bottom: 0;
+}
+
+@media screen and (min-width: 64em)
+{
+    .page__title
+    {
+        padding: 3rem 0;
+    }
+
+    .page__title h1
+    {
+        font-size: 4.5rem;
+
+        margin-bottom: .125em;
+    }
+
+    .page__title p
+    {
+        font-size: 2rem;
+
+        margin-bottom: 0;
+    }
+
+    .page__body
+    {
+        padding: 3rem 0;
+    }
+}

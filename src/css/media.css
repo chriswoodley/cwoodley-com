@@ -1,0 +1,416 @@
+/*===========================================================================
+=            Media Styles for Extra Small Screens - 320px and Up            =
+===========================================================================*/
+
+.media
+{
+    margin: 0 0 1.5rem 0;
+}
+
+.media__el
+{
+    margin: 0 0 1.5rem  0;
+}
+
+.media__body
+{
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+        flex: 1;
+}
+
+.media__body > .media
+{
+    margin: 0 0 1.5rem 5.5rem;
+}
+
+.media__el > :last-child,
+.media__body > :last-child
+{
+    margin-bottom: 0;
+}
+
+
+/*----------  Alignment Styles  ----------*/
+
+.media--left,
+.media--middle,
+.media--top,
+.media--bottom,
+.media--right
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.media--left > .media__el,
+.media__body > .media--left > .media__el
+{
+    margin: 0 1rem 0 0;
+    margin-right: 1rem;
+
+    -webkit-box-ordinal-group: 1;
+    -ms-flex-order: 0;
+    order: 0;
+}
+
+.media--middle,
+.media__body > .media--middle
+{
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+}
+
+.media--top,
+.media__body > .media--top
+{
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    -ms-grid-row-align: flex-start;
+    align-items: flex-start;
+}
+
+.media--bottom,
+.media__body > .media--bottom
+{
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    -ms-grid-row-align: flex-end;
+    align-items: flex-end;
+}
+
+.media--right > .media__el,
+.media__body > .media--right > .media__el
+{
+    margin: 0 0 0 1rem;
+
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+}
+
+/*=====================================================================
+=            Media Styles for Small Screens - 425px and up            =
+=====================================================================*/
+
+@media screen and (min-width:26.5625em)
+{
+    /*----------  Aignment Styles  ----------*/
+
+    .media--sm-left,
+    .media--sm-middle,
+    .media--sm-top,
+    .media--sm-bottom,
+    .media--sm-right
+    {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .media--sm-left > .media__el,
+    .media__body > .media--sm-left > .media__el
+    {
+        margin: 0 1rem 0 0;
+        margin-right: 1rem;
+
+        -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+        order: 0;
+    }
+
+    .media--sm-middle,
+    .media__body > .media--sm-middle
+    {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -ms-grid-row-align: center;
+        align-items: center;
+    }
+
+    .media--sm-top,
+    .media__body > .media--sm-top
+    {
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        -ms-grid-row-align: flex-start;
+        align-items: flex-start;
+    }
+
+    .media--sm-bottom,
+    .media__body > .media--sm-bottom
+    {
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        -ms-grid-row-align: flex-end;
+        align-items: flex-end;
+    }
+
+    .media--sm-right > .media__el,
+    .media__body > .media--sm-right > .media__el
+    {
+        margin: 0 0 0 1rem;
+
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1;
+    }
+
+    .media--sm-stacked,
+    .media__body > .media--sm-stacked
+    {
+        display: block;
+    }
+
+    .media--sm-stacked > .media__el,
+    .media__body > .media--sm-stacked > .media__el
+    {
+        margin: 0 0 1.5rem 0;
+    }
+}
+
+
+/*======================================================================
+=            Media Styles for Medium Screens - 768px and Up            =
+======================================================================*/
+
+@media screen and (min-width:48em)
+{
+    /*----------  Aignment Styles  ----------*/
+
+    .media--md-left,
+    .media--md-middle,
+    .media--md-top,
+    .media--md-bottom,
+    .media--md-right
+    {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .media--md-left > .media__el,
+    .media__body > .media--md-left > .media__el
+    {
+        margin: 0 1rem 0 0;
+        margin-right: 1rem;
+
+        -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+        order: 0;
+    }
+
+    .media--md-middle,
+    .media__body > .media--md-middle
+    {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -ms-grid-row-align: center;
+        align-items: center;
+    }
+
+    .media--md-top,
+    .media__body > .media--md-top
+    {
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        -ms-grid-row-align: flex-start;
+        align-items: flex-start;
+    }
+
+    .media--md-bottom,
+    .media__body > .media--md-bottom
+    {
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        -ms-grid-row-align: flex-end;
+        align-items: flex-end;
+    }
+
+    .media--md-right > .media__el,
+    .media__body > .media--md-right > .media__el
+    {
+        margin: 0 0 0 1rem;
+
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1;
+    }
+
+    .media--md-stacked,
+    .media__body > .media--md-stacked
+    {
+        display: block;
+    }
+
+    .media--md-stacked > .media__el,
+    .media__body > .media--md-stacked > .media__el
+    {
+        margin: 0 0 1.5rem 0;
+    }
+}
+
+
+/*======================================================================
+=            Media Styles for Large Screens - 1024px and Up            =
+======================================================================*/
+
+@media screen and (min-width:64em)
+{
+    /*----------  Aignment Styles  ----------*/
+
+    .media--lg-left,
+    .media--lg-middle,
+    .media--lg-top,
+    .media--lg-bottom,
+    .media--lg-right
+    {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .media--lg-left > .media__el,
+    .media__body > .media--lg-left > .media__el
+    {
+        margin: 0 1rem 0 0;
+        margin-right: 1rem;
+
+        -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+        order: 0;
+    }
+
+    .media--lg-middle,
+    .media__body > .media--lg-middle
+    {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -ms-grid-row-align: center;
+        align-items: center;
+    }
+
+    .media--lg-top,
+    .media__body > .media--lg-top
+    {
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        -ms-grid-row-align: flex-start;
+        align-items: flex-start;
+    }
+
+    .media--lg-bottom,
+    .media__body > .media--lg-bottom
+    {
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        -ms-grid-row-align: flex-end;
+        align-items: flex-end;
+    }
+
+    .media--lg-right > .media__el,
+    .media__body > .media--lg-right > .media__el
+    {
+        margin: 0 0 0 1rem;
+
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1;
+    }
+
+    .media--lg-stacked,
+    .media__body > .media--lg-stacked
+    {
+        display: block;
+    }
+
+    .media--lg-stacked > .media__el,
+    .media__body > .media--lg-stacked > .media__el
+    {
+        margin: 0 0 1.5rem 0;
+    }
+}
+
+
+/*============================================================================
+=            Media Styles for Extra Large Screens - 1200px and Up            =
+============================================================================*/
+
+@media screen and (min-width:75em)
+{
+    /*----------  Aignment Styles  ----------*/
+
+    .media--xlg-left,
+    .media--xlg-middle,
+    .media--xlg-top,
+    .media--xlg-bottom,
+    .media--xlg-right
+    {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .media--xlg-left > .media__el,
+    .media__body > .media--xlg-left > .media__el
+    {
+        margin: 0 1rem 0 0;
+        margin-right: 1rem;
+
+        -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+        order: 0;
+    }
+
+    .media--xlg-middle,
+    .media__body > .media--xlg-middle
+    {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -ms-grid-row-align: center;
+        align-items: center;
+    }
+
+    .media--xlg-top,
+    .media__body > .media--xlg-top
+    {
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        -ms-grid-row-align: flex-start;
+        align-items: flex-start;
+    }
+
+    .media--xlg-bottom,
+    .media__body > .media--xlg-bottom
+    {
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        -ms-grid-row-align: flex-end;
+        align-items: flex-end;
+    }
+
+    .media--xlg-right > .media__el,
+    .media__body > .media--xlg-right > .media__el
+    {
+        margin: 0 0 0 1rem;
+
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1;
+    }
+
+    .media--xlg-stacked,
+    .media__body > .media--xlg-stacked
+    {
+        display: block;
+    }
+
+    .media--xlg-stacked > .media__el,
+    .media__body > .media--xlg-stacked > .media__el
+    {
+        margin: 0 0 1.5rem 0;
+    }
+}

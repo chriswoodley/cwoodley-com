@@ -1,0 +1,116 @@
+header
+{
+    padding: 0 0 1.5rem;
+}
+
+header .btn
+{
+    margin-bottom: 1.5rem;
+}
+
+footer
+{
+    padding: 1.5em 0;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+.btn
+{
+    margin-bottom: 0;
+    padding-right: 1.558em;
+    padding-left: 1.558em;
+}
+
+.off-canvas__menu
+{
+    background: #282828;
+}
+
+.off-canvas__menu .menu__item > span
+{
+    color: #2bd97f;
+}
+
+.off-canvas__menu .menu__item--parent > span:hover,
+.off-canvas__menu .menu__item--parent.menu__item--active > span
+{
+    color: #ffb866;
+}
+
+.off-canvas__menu .menu__item > a:hover,
+.off-canvas__menu .menu__item > a:focus,
+.off-canvas__menu .menu__item > span:hover,
+.off-canvas__menu .menu__item--parent:hover > span
+{
+    background-color: #223042;
+}
+
+.off-canvas__menu .menu--border .menu__item + .menu__item
+{
+    border-top-color: #444;
+}
+
+.off-canvas__menu .menu__sub--border > .menu__sub-item + .menu__sub-item
+{
+    border-top-color: #666;
+}
+
+.off-canvas__menu .menu__sub
+{
+    background-color: #3e3e3e;
+}
+
+.media
+{
+    margin-bottom: 0;
+}
+
+.main-nav
+{
+    position: relative;
+    z-index: 999;
+
+    transform: translate(0, 50%);
+}
+
+.main-nav .menu__item > a:link,
+.main-nav .menu__item > a:visited,
+.main-nav .menu__sub
+{
+    background: #475466;
+}
+
+.main-nav .menu__item > a:link,
+.main-nav .menu__item > a:visited,
+.main-nav .menu__sub-item > a:link,
+.main-nav .menu__sub-item > a:visited
+{
+    color: #f1f1f1;
+}
+
+.main-nav .menu__item > a:hover,
+.main-nav .menu__item > a:active,
+.main-nav .menu__item > a:focus,
+.main-nav .menu__sub-item > a:hover,
+.main-nav .menu__sub-item > a:active,
+.main-nav .menu__sub-item > a:focus
+{
+    color: #2bd97f;
+    background: #3e3e3e;
+}
+
+.main-nav .menu__item + .menu__item
+{
+    margin-left: 1.5rem;
+}
+
+@media screen and (min-width: 64em) {
+    header
+    {
+        padding: 1.5rem 0;
+    }
+}

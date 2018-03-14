@@ -1,0 +1,93 @@
+/*========================================================================
+=            Card Styles for Extra Small Screens - 320 and up            =
+========================================================================*/
+
+:host {
+  position: relative;
+
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+          flex-direction: column;
+
+  width: 100%;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+
+  background: #fff;
+
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+/*----------  Card Structure Styles  ----------*/
+
+.card__body,
+.card__footer {
+  padding: 1.5rem;
+}
+
+.card__body > :last-child,
+.card__footer > :last-child {
+  margin-bottom: 0;
+}
+
+.card__footer {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+
+  margin-top: auto;
+
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-pack: start;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+}
+
+.card__footer-item {
+  padding-right: 1.5rem;
+
+  text-align: center;
+}
+
+.card__media {
+  position: relative;
+
+  margin-bottom: 1.5rem;
+}
+
+:host > .card__media:first-child {
+  margin-bottom: 0;
+}
+
+
+/*===================================================================
+=            Card Styles for Large Screens - 1024 and Up            =
+===================================================================*/
+
+@media screen and (min-width: 64em) {
+  :host {
+      min-height: 537px;
+  }
+}
+
+
+/*===================================
+=            IE 11 Hacks            =
+===================================*/
+
+/*----------  Extra Small Screens  ----------*/
+@media screen  and (min-width: 26.5625em) and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .card__media {
+      flex: 0 0 auto;
+  }
+}

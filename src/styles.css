@@ -1,1 +1,133 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('../node_modules/normalize.css');
+@import url('css/base.css');
+@import url('css/layout.css');
+@import url('css/off-canvas.css');
+@import url('css/button.css');
+@import url('css/icon.css');
+@import url('css/menu.css');
+@import url('css/media.css');
+@import url('css/page.css');
+@import url('css/block.css');
+@import url('css/vertical-space.css');
+@import url('css/text-alignment.css');
+@import url('css/visibility.css');
+@import url('css/sticky.css');
+
+app-root {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+#splash {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #ccc;
+}
+
+#splash > img {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*==================================
+=            Typography            =
+==================================*/
+
+body {
+  font-family: robotolight;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'roboto_slablight', serif;
+}
+
+h1,
+.h1 {
+  color: #ffb866;
+}
+
+h2,
+.h2 {
+  color: #2bd97f;
+}
+
+h3,
+.h3 {
+  color: #475465;
+}
+
+/*----------  768 and up  ----------*/
+
+@media screen and (min-width: 48em) {
+  body {
+    font-size: 1.125rem;
+  }
+}
+
+/*===================================
+=            Site Colors            =
+===================================*/
+.green-bg {
+  background-color: #2bd97f;
+}
+
+.light-gray-bg {
+  background-color: #f1f1f1;
+}
+
+.dark-gray-bg {
+  background-color: #3e3e3e;
+}
+
+.green-text,
+.green-text:link,
+.green-text:visited {
+  color: #2bd97f;
+}
+
+.white-text,
+.white-text:link,
+.white-text:visited {
+  color: #ffffff;
+}
+
+.gray-text,
+.gray-text:link,
+.gray-text:visited {
+  color: #949494;
+}
+
+/*========================================
+=            Site Backgrounds            =
+========================================*/
+
+.blue-pattern {
+  background-image: url(assets/img/shattered_@2X.png);
+  background-repeat: repeat;
+  background-size: 100%;
+}
+
+/*=============================
+=            Lists            =
+=============================*/
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
